@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://127.0.0.1:5500/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to the Republic of Khalistan - A vision for a new nation.">
+    <title>Republic of Khalistan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff4e6; /* Light kesari background */
+            color: #333;
+        }
+        header {
+            background-color: #FF9933; /* Kesari color */
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #FF8000; /* Darker Kesari */
+            padding: 0.5em 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1em;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            padding: 2em;
+            text-align: center;
+        }
+        section {
+            margin: 2em 0;
+        }
+        footer {
+            background-color: #FF9933;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            margin-top: 2em;
+        }
+        .leaders {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1em;
+            margin-top: 1em;
+        }
+        .leader {
+            background-color: #FFF1E0; /* Light Kesari for leader cards */
+            padding: 1em;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .leader h3 {
+            margin: 0.5em 0;
+            color: #FF8000; /* Dark Kesari for leader names */
+        }
+        .leader .contact {
+            margin-top: 0.5em;
+            font-size: 0.9em;
+            color: #333;
+        }
+        .leader .contact span {
+            font-weight: bold;
+        }
+        #toggleButton {
+            margin-top: 1em;
+            padding: 0.5em 1em;
+            background-color: #FF8000;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #toggleButton:hover {
+            background-color: #FF9933;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Republic of Khalistan</h1>
+        <p>A vision of unity, culture, and progress</p>
+    </header>
+    <nav>
+        <a href="http://127.0.0.1:5500/index.html#about">About</a>
+        <a href="http://127.0.0.1:5500/index.html#vision">Vision</a>
+        <a href="http://127.0.0.1:5500/index.html#culture">Culture</a>
+        <a href="http://127.0.0.1:5500/index.html#leaders">Leaders</a>
+        <a href="http://127.0.0.1:5500/index.html#contact">Contact</a>
+    </nav>
+    <main>
+        <section id="about">
+            <h2>About Us</h2>
+            <p>
+                The Republic of Khalistan is a conceptual nation that celebrates the rich heritage, culture, and unity of its people. 
+                Learn more about the historical context and the Khalistan movement 
+                <a href="https://en.wikipedia.org/wiki/Khalistan_movement" target="_blank" style="color: #FF8000; text-decoration: underline;">
+                    here
+                </a>.
+            </p>
+        </section>
+        <section id="vision">
+            <h2>Our Vision</h2>
+            <p>To build a society based on principles of equality, innovation, and respect for cultural diversity.</p>
+        </section>
+        <section id="culture">
+            <h2>Our Culture</h2>
+            <p>Experience the vibrant traditions, music, and cuisine that make Khalistan unique.</p>
+        </section>
+        <section id="leaders">
+            <h2>Top Leaders</h2>
+            <p>Meet the leaders guiding the Republic of Khalistan toward a brighter future:</p>
+            <button id="toggleButton">Hide Leaders</button>
+            <div class="leaders" id="leadersList">
+                <div class="leader">
+                    <h3>Kanwar Mehtab Singh Sekhon</h3>
+                    <p>Visionary leader dedicated to cultural unity and national progress.</p>
+                    <div class="contact">
+                        <span>Contact:</span> Not Available
+                    </div>
+                </div>
+                <div class="leader">
+                    <h3>Gurpartap Singh Dhillon</h3>
+                    <p>Championing innovation and youth empowerment.</p>
+                    <div class="contact">
+                        <span>Contact:</span> Not Available
+                    </div>
+                </div>
+                <div class="leader">
+                    <h3>Jashan CR</h3>
+                    <p>A strategist focused on economic development and education.</p>
+                    <div class="contact">
+                        <span>Contact:</span> 6284706101
+                    </div>
+                </div>
+                <div class="leader">
+                    <h3>Vedant</h3>
+                    <p>Advocate for equality and sustainable growth.</p>
+                    <div class="contact">
+                        <span>Contact:</span> Not Available
+                    </div>
+                </div>
+                <div class="leader">
+                    <h3>Sameer</h3>
+                    <p>A strong voice for cultural preservation and progress.</p>
+                    <div class="contact">
+                        <span>Contact:</span> Not Available
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>For more information, reach out to us at <a href="mailto:info@khalistan.org" id="contactLink">info@khalistan.org</a>.</p>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Republic of Khalistan. All rights reserved.</p>
+    </footer>
+    <script>
+        // Toggle the visibility of the "Top Leaders" section
+        const toggleButton = document.getElementById('toggleButton');
+        const leadersList = document.getElementById('leadersList');
+
+        toggleButton.addEventListener('click', () => {
+            if (leadersList.style.display === 'none') {
+                leadersList.style.display = 'grid';
+                toggleButton.textContent = 'Hide Leaders';
+            } else {
+                leadersList.style.display = 'none';
+                toggleButton.textContent = 'Show Leaders';
+            }
+        });
+
+        // Alert message when the contact link is clicked
+        const contactLink = document.getElementById('contactLink');
+        contactLink.addEventListener('click', (event) => {
+            event.preventDefault(); // Prevent the default mailto action
+            alert('Thank you for reaching out! We will respond to your inquiry shortly.');
+        });
+    </script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body></html>
